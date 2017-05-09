@@ -1,0 +1,4 @@
+Android
+ftp://ftp.ingenic.cn/DevSupport/Newton/demo/newton-android-demo.tar.bz2
+Linux
+ftp://ftp.ingenic.cn/DevSupport/Newton/demo/newton-linux-demo.tar.bz2

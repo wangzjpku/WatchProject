@@ -1,0 +1,51 @@
+Step 1: Install Ubuntu-12.04 64-bit OS.
+
+Step 2: Install other required packages:
+	
+  $ sudo apt-get install cpp-4.6 g++-4.6 gcc-4.6 gcc-4.6-multilib gcc g++ cpp 
+    gcc-multilib g++-4.6-multilib git-core git gnupg flex bison gperf build-essential 
+    zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev libx11-dev:i386 
+    libreadline6-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev g++-multilib mingw32 
+    tofrodos python-markdown libxml2-utils xsltproc zlib1g-dev:i386 ia32-libs gawk 
+    qt4-dev-tools libgl1-mesa-dri:i386 libglapi-mesa:i386 libncurses5-dev libqt3-mt-dev
+
+Step 3: Install JDK (jdk-6u37-linux-x64.bin)
+
+Step 4: Download the Android sources
+
+  $ mkdir ~/newton-android
+  $ cd ~/newton-android
+  $ wget http://git.ingenic.cn:8082/bj/repo
+  $ chmod +x repo
+
+  $ ./repo init -u http://git.ingenic.cn:8082/gerrit/AOSP/platform/manifest -b android-4.3-newton-4775 
+  $ ./repo sync
+
+  This will sync the latest source from the git repository to your working directory.
+
+  You can also sync to the latest stable tag with the following command:
+  
+  $ ./repo forall -c "git reset --hard ingenic-android4.3.0-kernel3.0.8-newton-vx.x-yyyymmdd"
+
+  Use next command to list all the stable tags:
+
+  $ cd kernel
+  $ git tag | grep newton
+
+Step 5: Download the Linux sources
+
+  $  mkdir ~/newton-linux
+  $  cd ~/newton-linux
+  $  wget http://git.ingenic.cn:8082/bj/repo
+  $  chmod +x repo
+  $  ./repo init -u http://git.ingenic.cn:8082/gerrit/linux/manifest.git -b newton-master -m customer.xml
+  $  ./repo sync  
+
+For detailed information, please read these two documents:
+
+1. <<Newton_Android_Development_Guide>>
+2. <<Newton_Linux_Development_Guide>>
+
+
+Enjoy yourself !!!
+
