@@ -1,2 +1,0 @@
-# WatchProject
-MyWatchProject
